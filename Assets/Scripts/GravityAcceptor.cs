@@ -47,11 +47,9 @@ public class GravityAcceptor : MonoBehaviour
 
     private void DoOrientation()
     {
-        float angleFrontal = Vector3.Angle(m_VectorToGravityCenter, Vector3.up * -1);
+        //Debug.DrawLine(transform.position, transform.position + m_VectorToGravityCenter * 100);
 
-        Debug.DrawLine(transform.position, transform.position + m_VectorToGravityCenter * 100);
-
-        transform.up = (m_VectorToGravityCenter * -1).normalized;
+        //transform.up = (m_VectorToGravityCenter * -1).normalized;
     }
 
     private void CheckIsGrounded()
