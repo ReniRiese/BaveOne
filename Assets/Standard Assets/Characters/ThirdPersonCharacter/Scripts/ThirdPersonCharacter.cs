@@ -29,6 +29,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
 
+		
+		// Planet Gravity
+		public Transform planet;
+		public bool alignToPlanet = true;
+
+		float gravityConstant = 9.81f;
+		//
+		
 
 		void Start()
 		{
@@ -41,7 +49,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
 		}
-
 
 		public void Move(Vector3 move, bool crouch, bool jump)
 		{
